@@ -1,3 +1,8 @@
+# Environment Variables #
+#########################
+*.env
+config.py
+
 # Logs and databases #
 ######################
 *.log
