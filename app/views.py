@@ -5,5 +5,17 @@ from app import app
 @app.route('/index')
 def index():
     user = {'nickname': 'Test'}
+    posts = [ # mocked posts data
+        {
+            'author': {'nickname': 'Wally'},
+            'body': 'Great article!'
+        },
+        {
+            'author': {'nickname': 'Brenda'},
+            'body': 'Interesting article!'
+        }
+    ]
     return render_template('index.html',
-                            user=user)
+                            title='Home',
+                            user=user,
+                            posts=posts)
