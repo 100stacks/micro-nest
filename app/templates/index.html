@@ -1,20 +1,12 @@
-<html>
-  <head>
-    {% if title %}
-    <title>{{ title }} - MicroNest</title>
-    {% else %}
-    <title>Welcome to MicroNest</title>
-    {% endif %}
-  </head>
-  <body>
-    <h1>Hello, {{ user.nickname }}!</h1>
-    <p>Comments:</p>
-    {% for post in posts %}
-    <div>
-      <p><strong>Author: </strong>{{ post.author.nickname }}</p>
-      <p><strong>Post: </strong>{{ post.body }}</p>
-      <hr/>
-    </div>
-    {% endfor %}
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Hi, {{ user.nickname }}!</h1>
+  <p>Comments:</p>
+  {% for post in posts %}
+  <div>
+    <p><strong>Author: </strong>{{ post.author.nickname }}</p>
+    <p><strong>Post: </strong>{{ post.body }}</p>
+    <hr/>
+  </div>
+  {% endfor %}
+{% endblock %}

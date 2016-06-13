@@ -1,0 +1,19 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - MicroNest</title>
+    {% else %}
+    <title>Welcome to MicroNest</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>
+      MicroNest: <a href="/index">Home</a>
+    </div>
+    <hr/>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+</html>
