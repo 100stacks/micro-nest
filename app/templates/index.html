@@ -1,6 +1,10 @@
 <html>
   <head>
+    {% if title %}
     <title>{{ title }} - MicroNest</title>
+    {% else %}
+    <title>Welcome to MicroNest</title>
+    {% endif %}
   </head>
   <body>
     <h1>Hello, {{ user.nickname }}!</h1>
